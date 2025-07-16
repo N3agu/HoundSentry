@@ -1,5 +1,6 @@
 #include <iostream>
 #include <windows.h>
+#include "ProcessUtils.h"
 
 using std::cout;
 
@@ -20,6 +21,11 @@ int main() {
 |_| |_|\___/ \__,_|_| |_|\__,_|____/ \___|_| |_|\__|_|   \__, |
                                                          |___/ 
 )";
-	cout << "\t   The Backbone of ChangeHound - by N3agu";
+	cout << "\t   The Backbone of ChangeHound - by N3agu\n\n";
+
+	if (!IsProcessElevated()) {
+		std::cerr << "[ERROR] This program requires administrator privileges.\n";
+		return 1;
+	}
 	return 0;
 }
