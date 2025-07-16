@@ -120,12 +120,17 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Monitor.cpp" />
     <ClCompile Include="ProcessUtils.cpp" />
     <ClCompile Include="ProcessUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Monitor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
